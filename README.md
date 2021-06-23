@@ -1,6 +1,6 @@
 </p>
 <h1 align="center">
-    <img alt="NextLevelWeek" title="#NextLevelWeek" src="./assets/capa.png" width="500px"/>
+    <img alt="NextLevelWeek" title="#NextLevelWeek" src="./images/capa1.png" width="500px"/>
 </h1>
 
 <h4 align="center"> 
@@ -118,4 +118,4 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 Este projeto esta sobe a licença [MIT](./LICENSE).
 
-Marlon Santana 👋🏽 [Entre em contato!](https://www.linkedin.com/in/marlon-oliveira-a820311a7/)
+Marlon Santana 👋🏽 [Entre em contato!] (https://www.linkedin.com/in/marlon-oliveira-a820311a7/)
