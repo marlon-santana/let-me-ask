@@ -5,15 +5,14 @@ import googleIconImg from '../assets/images/google-icon.svg'
 import '../styles/auth.scss'
 import { Button } from '../components/Button'
 import { useHistory } from 'react-router-dom';
-import { useContext } from 'react'
-import { AuthContext } from '../App'
+import { useAuth } from '../hooks/useAuth'
 
 
 
 export function Home() {
 
 const history = useHistory();
-const { user,signInWithGoogle } = useContext(AuthContext)
+const { user,signInWithGoogle } = useAuth()
 
 async function handleCreateRoom() {
     if (!user) {
