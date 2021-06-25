@@ -8,6 +8,7 @@ import { useState } from 'react'
 import { database } from '../services/firebase'
 import { FormEvent } from 'react'
 import { useEffect } from 'react'
+import { Question } from '../components/Question'
 
 
 type FirebaseQuestions = Record<string, {
@@ -25,6 +26,7 @@ type  Question = {
         name:string;
         avatar: string;
     }
+    id: string;
     content: string;
     isAnswered:boolean;
     isHighLighted: boolean
@@ -127,7 +129,16 @@ export function Room() {
                     <Button type="submit" disabled={!user}>Enviar</Button>
                 </div>
             </form>
-                    {JSON.stringify(questions)}
+                   <div className="question-lit">
+                   {questions.map(question => {
+                        return (
+                            <Question
+                            key={question.id} 
+                            content={question.content}
+                            author={question.author}/>
+                        );
+                    })}
+            </div>
         </main>
         </div>
     );
