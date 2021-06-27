@@ -121,20 +121,25 @@ export function AdminRoom() {
                             isAnswered={question.isAnswered}
                             isHighlighted={question.isHighLighted}
                             >
-
-                                <button
-                                type="button"
-                                onClick={() => handleCheckQuestionAsAnswered(question.id)}
-                                >
-                                    <img src={checkImg} alt="Marcar pergunta á respondida" />
-                                </button>
-
-                                <button
-                                type="button"
-                                onClick={() => handleHighLightQuestion(question.id)}
-                                >
-                                    <img src={answerImg} alt="Dar destaque á pergunta" />
-                                </button>
+                                {!question.isAnswered && (
+                                    <>
+                                    <button
+                                    type="button"
+                                    onClick={() => handleCheckQuestionAsAnswered(question.id)}
+                                    >
+                                        <img src={checkImg} alt="Marcar pergunta á respondida" />
+                                    </button>
+    
+                                    <button
+                                    type="button"
+                                    onClick={() => handleHighLightQuestion(question.id)}
+                                    >
+                                        <img src={answerImg} alt="Dar destaque á pergunta" />
+                                    </button>
+                                    </>
+                                )}
+                                
+                                
                                 <button
                                 type="button"
                                 onClick={() => handleDeleteQuestion(question.id)}
